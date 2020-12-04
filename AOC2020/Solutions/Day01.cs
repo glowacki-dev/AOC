@@ -5,7 +5,7 @@ namespace AOC2020
 {
     internal class Day01 : ISolution<int>
     {
-        public void Run(IEnumerable<int> lines)
+        public object Run(IEnumerable<int> lines)
         {
             var numbers = new HashSet<int>(lines);
             foreach(int first in numbers)
@@ -14,11 +14,11 @@ namespace AOC2020
                 {
                     if(numbers.Contains(2020 - first - second))
                     {
-                        Console.WriteLine(first * second * (2020 - first - second));
-                        return;
+                        return first * second * (2020 - first - second);
                     }
                 }
             }
+            return null;
         }
     }
 } 

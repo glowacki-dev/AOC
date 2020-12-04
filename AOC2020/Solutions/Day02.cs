@@ -6,7 +6,7 @@ namespace AOC2020
 {
     internal class Day02 : ISolution<string>
     {
-        public void Run(IEnumerable<string> lines)
+        public object Run(IEnumerable<string> lines)
         {
             int validPasswords = 0;
             foreach(string line in lines)
@@ -14,7 +14,7 @@ namespace AOC2020
                 string[] entry = line.Split(new[] { ':', ' ', '-' }, StringSplitOptions.RemoveEmptyEntries);
                 if(new PasswordValidator(entry).IsValid()) validPasswords++;
             }
-            Console.WriteLine(validPasswords);
+            return validPasswords;
         }
 
         private class PasswordValidator
