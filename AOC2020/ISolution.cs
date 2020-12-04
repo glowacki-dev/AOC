@@ -8,6 +8,6 @@ namespace AOC2020
 {
     public interface ISolution<T>
     {
-        object Run(IEnumerable<T> lines);
+        object Run(Input<T> lines);
     }
 }

@@ -6,10 +6,10 @@ namespace AOC2020
 {
     internal class Day03 : ISolution<string>
     {
-        public object Run(IEnumerable<string> lines)
+        public object Run(Input<string> lines)
         {
             var map = new List<InfiniteList<char>>();
-            foreach(string line in lines)
+            foreach(string line in lines.Lines)
             {
                 map.Add(new InfiniteList<char>(line));
             }

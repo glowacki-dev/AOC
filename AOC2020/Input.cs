@@ -13,9 +13,16 @@ namespace AOC2020
         {
             get
             {
-                return Data.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None)
-                    .Where(val => val != "")
+                return Data.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries)
                     .Select(val => (T)Convert.ChangeType(val, typeof(T)));
+            }
+        }
+
+        public IEnumerable<string> RawLines
+        {
+            get
+            {
+                return Data.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
             }
         }
 
@@ -31,7 +38,7 @@ namespace AOC2020
 
         public Input(string data)
         {
-            Data = data;
+            Data = data.Trim();
         }
     }
 }

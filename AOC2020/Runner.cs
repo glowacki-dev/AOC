@@ -19,7 +19,7 @@ namespace AOC2020
         internal void Run()
         {
             Console.WriteLine(Solver.GetType().Name);
-            Console.WriteLine(Solver.Run(Input<T>.LoadFromFile(DataSource).Lines));
+            Console.WriteLine(Solver.Run(Input<T>.LoadFromFile(DataSource)));
         }
 
         public Runner(DataType type, ISolution<T> solver)
