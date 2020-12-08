@@ -42,6 +42,7 @@
     <Compile Include="Solutions\Day05.cs" />
     <Compile Include="Solutions\Day06.cs" />
     <Compile Include="Solutions\Day07.cs" />
+    <Compile Include="Solutions\Day08.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -63,6 +64,8 @@
     <None Include="Data\Day06.txt" />
     <None Include="Samples\Day07.txt" />
     <None Include="Data\Day07.txt" />
+    <None Include="Samples\Day08.txt" />
+    <None Include="Data\Day08.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
