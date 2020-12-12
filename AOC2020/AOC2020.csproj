@@ -28,6 +28,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -46,6 +48,7 @@
     <Compile Include="Solutions\Day09.cs" />
     <Compile Include="Solutions\Day10.cs" />
     <Compile Include="Solutions\Day11.cs" />
+    <Compile Include="Solutions\Day12.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -75,6 +78,8 @@
     <None Include="Data\Day10.txt" />
     <None Include="Samples\Day11.txt" />
     <None Include="Data\Day11.txt" />
+    <None Include="Samples\Day12.txt" />
+    <None Include="Data\Day12.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
