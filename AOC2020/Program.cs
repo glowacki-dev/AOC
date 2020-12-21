@@ -6,7 +6,7 @@ namespace AOC2020
     {
         public static void Main(string[] args)
         {
-            new Runner<string>(DataType.real, new Day20()).Run();
+            new Runner<string>(DataType.real, new Day21()).Run();
         }
     }
 }
