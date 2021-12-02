@@ -14,7 +14,7 @@ Some of my solutions from past AOC events
 |  | Part One | Part Two |
 | --- | :---: | :---: |
 | Day 1 | :star:  | :star: |
-| Day 2 |   |  |
+| Day 2 | :star:  | :star: |
 | Day 3 |   |  |
 | Day 4 |   |  |
 | Day 5 |   |  |
