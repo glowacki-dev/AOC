@@ -12,6 +12,7 @@
 		CC1184C62757D27100A9C7BE /* BaseSolver.h in Sources */ = {isa = PBXBuildFile; fileRef = CC1184C52757D27100A9C7BE /* BaseSolver.h */; };
 		CC1184C82757D2E100A9C7BE /* Solver01.h in Sources */ = {isa = PBXBuildFile; fileRef = CC1184C72757D2E100A9C7BE /* Solver01.h */; };
 		CC27F3B5275793AC00C340D7 /* Solver01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC27F3B4275793AC00C340D7 /* Solver01.cpp */; };
+		CC6605FD2758A3D200BF0B89 /* Solver02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC6605FC2758A3D200BF0B89 /* Solver02.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,10 @@
 		CC1184C92757D71E00A9C7BE /* 01.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 01.txt; sourceTree = "<group>"; };
 		CC27F3B1275793AC00C340D7 /* AOC2021 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AOC2021; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC27F3B4275793AC00C340D7 /* Solver01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver01.cpp; sourceTree = "<group>"; };
+		CC6605FB2758A3D200BF0B89 /* Solver02.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver02.h; sourceTree = "<group>"; };
+		CC6605FC2758A3D200BF0B89 /* Solver02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver02.cpp; sourceTree = "<group>"; };
+		CC6605FE2758A42600BF0B89 /* 02.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 02.txt; sourceTree = "<group>"; };
+		CC6605FF2758A5CD00BF0B89 /* 02.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 02.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			children = (
 				CC1184CA2757D73000A9C7BE /* samples */,
 				CC1184BE2757C5EC00A9C7BE /* 01.txt */,
+				CC6605FE2758A42600BF0B89 /* 02.txt */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -61,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CC1184C92757D71E00A9C7BE /* 01.txt */,
+				CC6605FF2758A5CD00BF0B89 /* 02.txt */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -70,7 +77,9 @@
 			children = (
 				CC1184C52757D27100A9C7BE /* BaseSolver.h */,
 				CC1184C12757CBC000A9C7BE /* BaseSolver.cpp */,
+				CC6605FB2758A3D200BF0B89 /* Solver02.h */,
 				CC1184C72757D2E100A9C7BE /* Solver01.h */,
+				CC6605FC2758A3D200BF0B89 /* Solver02.cpp */,
 				CC27F3B4275793AC00C340D7 /* Solver01.cpp */,
 			);
 			path = solutions;
@@ -164,6 +173,7 @@
 				CC1184C62757D27100A9C7BE /* BaseSolver.h in Sources */,
 				CC27F3B5275793AC00C340D7 /* Solver01.cpp in Sources */,
 				CC1184C42757CF7700A9C7BE /* main.cpp in Sources */,
+				CC6605FD2758A3D200BF0B89 /* Solver02.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
