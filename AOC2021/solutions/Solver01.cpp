@@ -1,13 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <climits>
-#include <string>
-#include <sstream>
-#include <deque>
-#include <numeric>
 #include "Solver01.h"
-
-using namespace std;
 
 void Solver01::solve() {
     const int WINDOW_SIZE = 3;
@@ -15,7 +6,7 @@ void Solver01::solve() {
     int previous = INT_MAX;
     int score = 0;
     deque<int> window;
-    for(std::string line: lines) {
+    for(string line: lines) {
         window.push_back(stoi(line));
         if (window.size() == WINDOW_SIZE)
         {

@@ -1,17 +1,25 @@
 #pragma once
-#include <string>
+#include <algorithm>
+#include <climits>
+#include <deque>
 #include <fstream>
+#include <iostream>
+#include <numeric>
+#include <sstream>
+#include <string>
 #include <vector>
+
+using namespace std;
 
 class BaseSolver {
 public:
-    BaseSolver(std::string);
-    BaseSolver(std::string, bool);
+    BaseSolver(string);
+    BaseSolver(string, bool);
     ~BaseSolver();
     virtual void solve() = 0;
 protected:
-    std::ifstream input;
-    std::vector<std::string> lines;
+    ifstream input;
+    vector<string> lines;
 private:
     void read_stream(bool);
 };
