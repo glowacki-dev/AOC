@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    Solver03 solver("03.txt", true);
+    Solver03 solver("samples/03.txt", true);
     solver.solve();
     std::cout << std::endl;
     return 0;
