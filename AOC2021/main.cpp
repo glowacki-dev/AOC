@@ -1,9 +1,8 @@
-#include "Solver03.h"
-#include <iostream>
+#include "Solver04.h"
 
 int main(int argc, const char * argv[]) {
-    Solver03 solver("samples/03.txt", true);
+    Solver04 solver("samples/04.txt");
     solver.solve();
-    std::cout << std::endl;
+    cout << endl;
     return 0;
 }

@@ -1,5 +1,4 @@
 #include "BaseSolver.h"
-#include <iostream>
 
 BaseSolver::BaseSolver(std::string input_name) : BaseSolver(input_name, false) {};
 

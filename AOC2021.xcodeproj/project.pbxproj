@@ -13,6 +13,7 @@
 		CC1184C82757D2E100A9C7BE /* Solver01.h in Sources */ = {isa = PBXBuildFile; fileRef = CC1184C72757D2E100A9C7BE /* Solver01.h */; };
 		CC27F3B5275793AC00C340D7 /* Solver01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC27F3B4275793AC00C340D7 /* Solver01.cpp */; };
 		CC6605FD2758A3D200BF0B89 /* Solver02.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC6605FC2758A3D200BF0B89 /* Solver02.cpp */; };
+		CCBE8D64275B46490029F8CE /* Solver04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCBE8D62275B46490029F8CE /* Solver04.cpp */; };
 		CCCA191B2759F56400E57C5E /* Solver03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCA191A2759F56400E57C5E /* Solver03.cpp */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,10 @@
 		CC6605FC2758A3D200BF0B89 /* Solver02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver02.cpp; sourceTree = "<group>"; };
 		CC6605FE2758A42600BF0B89 /* 02.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 02.txt; sourceTree = "<group>"; };
 		CC6605FF2758A5CD00BF0B89 /* 02.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 02.txt; sourceTree = "<group>"; };
+		CCBE8D61275B462F0029F8CE /* 04.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 04.txt; sourceTree = "<group>"; };
+		CCBE8D62275B46490029F8CE /* Solver04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver04.cpp; sourceTree = "<group>"; };
+		CCBE8D63275B46490029F8CE /* Solver04.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver04.h; sourceTree = "<group>"; };
+		CCBE8D65275B59690029F8CE /* 04.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 04.txt; sourceTree = "<group>"; };
 		CCCA19182759F55100E57C5E /* 03.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 03.txt; sourceTree = "<group>"; };
 		CCCA19192759F56400E57C5E /* Solver03.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver03.h; sourceTree = "<group>"; };
 		CCCA191A2759F56400E57C5E /* Solver03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver03.cpp; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 				CC1184BE2757C5EC00A9C7BE /* 01.txt */,
 				CC6605FE2758A42600BF0B89 /* 02.txt */,
 				CCCA191C2759F94600E57C5E /* 03.txt */,
+				CCBE8D65275B59690029F8CE /* 04.txt */,
 				CC1184CA2757D73000A9C7BE /* samples */,
 			);
 			path = data;
@@ -75,6 +81,7 @@
 				CC1184C92757D71E00A9C7BE /* 01.txt */,
 				CC6605FF2758A5CD00BF0B89 /* 02.txt */,
 				CCCA19182759F55100E57C5E /* 03.txt */,
+				CCBE8D61275B462F0029F8CE /* 04.txt */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -90,6 +97,8 @@
 				CC6605FB2758A3D200BF0B89 /* Solver02.h */,
 				CCCA191A2759F56400E57C5E /* Solver03.cpp */,
 				CCCA19192759F56400E57C5E /* Solver03.h */,
+				CCBE8D62275B46490029F8CE /* Solver04.cpp */,
+				CCBE8D63275B46490029F8CE /* Solver04.h */,
 			);
 			path = solutions;
 			sourceTree = "<group>";
@@ -180,6 +189,7 @@
 				CC1184C22757CBC000A9C7BE /* BaseSolver.cpp in Sources */,
 				CC1184C82757D2E100A9C7BE /* Solver01.h in Sources */,
 				CC1184C62757D27100A9C7BE /* BaseSolver.h in Sources */,
+				CCBE8D64275B46490029F8CE /* Solver04.cpp in Sources */,
 				CC27F3B5275793AC00C340D7 /* Solver01.cpp in Sources */,
 				CC1184C42757CF7700A9C7BE /* main.cpp in Sources */,
 				CC6605FD2758A3D200BF0B89 /* Solver02.cpp in Sources */,
