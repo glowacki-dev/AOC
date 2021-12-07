@@ -18,16 +18,24 @@ void Solver07::solve() {
 
     auto bounds = minmax_element(positions.begin(), positions.end());
 
-    int min_score = INT_MAX;
-    int min_position = INT_MAX;
+    int bound_min = *bounds.first;
+    int bound_max = *bounds.second;
 
-    for(int i = *bounds.first; i <= *bounds.second; i++) {
-        int score = accumulate(positions.begin(), positions.end(), 0, [i](int acc, int position){ return acc + fast_partial_sum(abs(i - position)); });
-        if(score < min_score) {
-            min_score = score;
-            min_position = i;
+    while(bound_min != bound_max) {
+        int score_min = 0, score_max = 0;
+        for(int position: positions) {
+            score_min += fast_partial_sum(abs(bound_min - position));
+            score_max += fast_partial_sum(abs(bound_max - position));
+        }
+
+        if(score_max > score_min) {
+            bound_max = floor((bound_max + bound_min) / 2.0);
+        } else {
+            bound_min = ceil((bound_max + bound_min) / 2.0);
         }
     }
 
-    cout << min_score << ":" << min_position << endl;
+    int min_score = accumulate(positions.begin(), positions.end(), 0, [bound_min](int acc, int position){ return acc + fast_partial_sum(abs(bound_min - position)); });
+
+    cout << min_score << ":" << bound_min << endl;
 }
