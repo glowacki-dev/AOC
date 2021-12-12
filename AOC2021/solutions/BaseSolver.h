@@ -4,6 +4,7 @@
 #include <deque>
 #include <fstream>
 #include <iostream>
+#include <list>
 #include <map>
 #include <numeric>
 #include <regex>

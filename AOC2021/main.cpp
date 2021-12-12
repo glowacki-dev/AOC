@@ -1,7 +1,7 @@
-#include "Solver11.h"
+#include "Solver12.h"
 
 int main(int argc, const char * argv[]) {
-    Solver11 solver("11.txt", true);
+    Solver12 solver("12.txt", true);
     solver.solve();
     cout << endl;
     return 0;
