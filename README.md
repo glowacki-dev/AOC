@@ -30,7 +30,7 @@ Some of my solutions from past AOC events
 | Day 15 | :star: | :star: |
 | Day 16 | :star: | :star: |
 | Day 17 | :star: | :star: |
-| Day 18 |  |  |
+| Day 18 | :star: | :star: |
 | Day 19 |  |  |
 | Day 20 |  |  |
 | Day 21 |  |  |
