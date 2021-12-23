@@ -25,6 +25,7 @@
 		CCCA191B2759F56400E57C5E /* Solver03.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCCA191A2759F56400E57C5E /* Solver03.cpp */; };
 		CCD1A52027632EF3005A658F /* Solver10.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD1A51E27632EF2005A658F /* Solver10.cpp */; };
 		CCD5DB942761DE33007CF658 /* Solver09.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCD5DB922761DE33007CF658 /* Solver09.cpp */; };
+		CCE03E4C2772FDFB00028C9B /* Solver22.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE03E4A2772FDFB00028C9B /* Solver22.cpp */; };
 		CCE2344B2765D2F900A37893 /* Solver12.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE2344A2765D2F900A37893 /* Solver12.cpp */; };
 		CCE48492275DEACA009BA7D3 /* Solver06.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE48490275DEACA009BA7D3 /* Solver06.cpp */; };
 		CCE9138D276DB5DE00FC23CC /* Solver18.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CCE9138B276DB5DE00FC23CC /* Solver18.cpp */; };
@@ -111,6 +112,11 @@
 		CCD5DB922761DE33007CF658 /* Solver09.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver09.cpp; sourceTree = "<group>"; };
 		CCD5DB932761DE33007CF658 /* Solver09.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver09.h; sourceTree = "<group>"; };
 		CCD5DB952761E223007CF658 /* 09.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 09.txt; sourceTree = "<group>"; };
+		CCE03E492772FDDD00028C9B /* 22.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 22.txt; sourceTree = "<group>"; };
+		CCE03E4A2772FDFB00028C9B /* Solver22.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver22.cpp; sourceTree = "<group>"; };
+		CCE03E4B2772FDFB00028C9B /* Solver22.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver22.h; sourceTree = "<group>"; };
+		CCE03E4D2773036700028C9B /* 22.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 22.txt; sourceTree = "<group>"; };
+		CCE03E4E2773135800028C9B /* 22a.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 22a.txt; sourceTree = "<group>"; };
 		CCE234482765D2DE00A37893 /* 12a.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 12a.txt; sourceTree = "<group>"; };
 		CCE234492765D2F900A37893 /* Solver12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver12.h; sourceTree = "<group>"; };
 		CCE2344A2765D2F900A37893 /* Solver12.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver12.cpp; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 				CCE91397276F1CF800FC23CC /* 19.txt */,
 				CCE9139C27705F6600FC23CC /* 20.txt */,
 				CCECEFA62771A793000B468E /* 21.txt */,
+				CCE03E4D2773036700028C9B /* 22.txt */,
 				CC1184CA2757D73000A9C7BE /* samples */,
 			);
 			path = data;
@@ -215,6 +222,8 @@
 				CCE91394276E802400FC23CC /* 18c.txt */,
 				CCE91396276F1CD300FC23CC /* 19.txt */,
 				CCE9139B27705EBC00FC23CC /* 20.txt */,
+				CCE03E492772FDDD00028C9B /* 22.txt */,
+				CCE03E4E2773135800028C9B /* 22a.txt */,
 			);
 			path = samples;
 			sourceTree = "<group>";
@@ -263,9 +272,11 @@
 				CCE91398276F1D1900FC23CC /* Solver19.cpp */,
 				CCE91399276F1D1900FC23CC /* Solver19.h */,
 				CCECEFA72771A79F000B468E /* Solver21.cpp */,
+				CCE03E4B2772FDFB00028C9B /* Solver22.h */,
 				CCE9139D27705F7B00FC23CC /* Solver20.cpp */,
 				CCECEFA82771A79F000B468E /* Solver21.h */,
 				CCE9139F27705F8900FC23CC /* Solver20.h */,
+				CCE03E4A2772FDFB00028C9B /* Solver22.cpp */,
 			);
 			path = solutions;
 			sourceTree = "<group>";
@@ -368,6 +379,7 @@
 				CC6605FD2758A3D200BF0B89 /* Solver02.cpp in Sources */,
 				CC84B8852769C7D4009FB419 /* Solver15.cpp in Sources */,
 				CCE48492275DEACA009BA7D3 /* Solver06.cpp in Sources */,
+				CCE03E4C2772FDFB00028C9B /* Solver22.cpp in Sources */,
 				CCE9138D276DB5DE00FC23CC /* Solver18.cpp in Sources */,
 				CC2AF3A4275F3B8F004CB623 /* Solver07.cpp in Sources */,
 				CCCA191B2759F56400E57C5E /* Solver03.cpp in Sources */,
