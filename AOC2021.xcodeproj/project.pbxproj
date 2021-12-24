@@ -118,6 +118,7 @@
 		CCE03E4D2773036700028C9B /* 22.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 22.txt; sourceTree = "<group>"; };
 		CCE03E4E2773135800028C9B /* 22a.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 22a.txt; sourceTree = "<group>"; };
 		CCE03E4F2774529A00028C9B /* 23.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 23.txt; sourceTree = "<group>"; };
+		CCE03E542775CBE800028C9B /* 24.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 24.txt; sourceTree = "<group>"; };
 		CCE234482765D2DE00A37893 /* 12a.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = 12a.txt; sourceTree = "<group>"; };
 		CCE234492765D2F900A37893 /* Solver12.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Solver12.h; sourceTree = "<group>"; };
 		CCE2344A2765D2F900A37893 /* Solver12.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solver12.cpp; sourceTree = "<group>"; };
@@ -188,6 +189,7 @@
 				CCECEFA62771A793000B468E /* 21.txt */,
 				CCE03E4D2773036700028C9B /* 22.txt */,
 				CCE03E4F2774529A00028C9B /* 23.txt */,
+				CCE03E542775CBE800028C9B /* 24.txt */,
 				CC1184CA2757D73000A9C7BE /* samples */,
 			);
 			path = data;

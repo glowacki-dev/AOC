@@ -35,8 +35,8 @@ Some of my solutions from past AOC events
 | Day 20 | :star: | :star: |
 | Day 21 | :star: | :star: |
 | Day 22 | :star: | :star: |
-| Day 23 |  |  |
-| Day 24 |  |  |
+| Day 23 | :star: | :star: |
+| Day 24 | :star: | :star: |
 | Day 25 |  |  |
 
 ## 2020 (C#)
