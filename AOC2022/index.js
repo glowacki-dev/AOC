@@ -11,5 +11,5 @@ fs.readFile(data_path, "utf8", (err, data) => {
     return;
   }
   var lines = data.split("\n");
-  new Solver(lines).run();
+  console.log(new Solver(lines).run());
 });
