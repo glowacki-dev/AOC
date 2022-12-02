@@ -1,5 +1,5 @@
 const DAY = process.env.DAY;
-const SAMPLE = process.env.SAMPLE || false;
+const SAMPLE = process.env.SAMPLE === "1" || false;
 
 const fs = require("fs");
 const Solver = require(`./solutions/${DAY}.js`);
