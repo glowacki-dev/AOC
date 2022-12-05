@@ -14,10 +14,10 @@ Some of my solutions from past AOC events
 |  | Part One | Part Two |
 | --- | :---: | :---: |
 | Day 1 | :star:  | :star: |
-| Day 2 |   |  |
-| Day 3 |   |  |
-| Day 4 |   |  |
-| Day 5 |   |  |
+| Day 2 | :star:  | :star: |
+| Day 3 | :star:  | :star: |
+| Day 4 | :star:  | :star: |
+| Day 5 | :star:  | :star: |
 | Day 6 |   |  |
 | Day 7 |   |  |
 | Day 8 |   |  |
