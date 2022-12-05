@@ -10,7 +10,7 @@ class Solver {
         if (line === "") {
           for (var i = 0; i < this.stacks.length; ++i) {
             this.stacks[i] = this.stacks[i].slice(0, -1);
-            this.stacks[i] = this.stacks[i].reverse();
+            this.stacks[i].reverse();
           }
           mode = 1;
           return;
@@ -40,9 +40,12 @@ class Solver {
 
   run() {
     this.moves.forEach(([amount, from, to]) => {
+      let moved = [];
       for (var i = 0; i < amount; i++) {
-        this.stacks[to].push(this.stacks[from].pop());
+        moved.push(this.stacks[from].pop());
       }
+      moved.reverse();
+      moved.forEach((el) => this.stacks[to].push(el));
     });
     return this.stacks.map((stack) => stack[stack.length - 1]).join("");
   }
