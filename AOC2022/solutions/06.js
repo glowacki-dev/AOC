@@ -15,8 +15,8 @@ class Solver {
       let buffer = new Queue();
       for (; i < stream.length; i++) {
         buffer.enqueue(stream[i]);
-        if (buffer.size < 4) continue;
-        if (buffer.size > 4) buffer.dequeue();
+        if (buffer.size < 14) continue;
+        if (buffer.size > 14) buffer.dequeue();
         if (_.uniq(buffer.toArray()).length == buffer.size) break;
       }
       console.log(i + 1);
