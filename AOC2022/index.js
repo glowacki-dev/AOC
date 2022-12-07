@@ -1,5 +1,6 @@
 const DAY = process.env.DAY;
 const SAMPLE = process.env.SAMPLE === "1" || false;
+const PREVIEW = process.env.PREVIEW === "1" || false;
 
 const fs = require("fs");
 const Solver = require(`./solutions/${DAY}.js`);
@@ -11,5 +12,12 @@ fs.readFile(data_path, "utf8", (err, data) => {
     return;
   }
   var lines = data.split("\n");
-  console.log(new Solver(lines).run());
+  console.log(
+    new Solver(
+      lines,
+      (preview = (msg) => {
+        PREVIEW && console.log(msg);
+      })
+    ).run()
+  );
 });

@@ -3,8 +3,9 @@ const graphology = require("graphology");
 const path = require("path");
 
 class Solver {
-  constructor(data) {
+  constructor(data, preview) {
     this.data = [];
+    this.preview = preview;
     data.forEach((line) => {
       if (line !== "") this.data.push(line.split(" "));
     });
@@ -31,33 +32,38 @@ class Solver {
           switch (command[1]) {
             case "cd":
               current_path = path.join(current_path, command[2]);
-              console.log("Moved to", current_path);
+              this.preview("Moved to", current_path);
               break;
             case "ls":
-              console.log("List");
+              this.preview("List");
               break;
           }
           break;
         case "dir":
           var new_path = path.join(current_path, command[1]);
-          console.log("Adding directory", command[1]);
+          this.preview("Adding directory", command[1]);
           this.graph.addNode(new_path, { type: "dir", size: 0 });
           this.graph.addEdge(current_path, new_path);
           break;
         default:
           var new_path = path.join(current_path, command[1]);
-          console.log("Adding file", command[1], command[0]);
+          this.preview("Adding file", command[1], command[0]);
           this.graph.addNode(new_path, { type: "file", size: 0 });
           this.graph.addEdge(current_path, new_path);
           this.graph.setNodeAttribute(new_path, "size", Number(command[0]));
       }
     });
-    console.log("graph");
+    const minimum_freeable =
+      30000000 - (70000000 - this.graph.getNodeAttributes("/").size);
+    this.preview("Looking for", minimum_freeable);
+    var deletion_candidates = [];
     this.graph.forEachNode((node, attributes) => {
-      console.log(node, attributes);
-      if (attributes.type === "dir" && attributes.size <= 100000)
-        score += attributes.size;
+      if (attributes.type === "dir") this.preview(node, attributes);
+      if (attributes.type === "dir" && attributes.size >= minimum_freeable)
+        deletion_candidates.push(attributes.size);
     });
+    this.preview(deletion_candidates);
+    score = _.min(deletion_candidates);
     return score;
   }
 }
