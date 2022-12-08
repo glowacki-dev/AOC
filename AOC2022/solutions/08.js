@@ -9,56 +9,56 @@ class Solver {
       if (line !== "")
         this.data.push(
           line.split("").map((val) => {
-            return { value: Number(val), visible: false };
+            return { value: Number(val), score: 0 };
           })
         );
     });
   }
 
+  find_score(center_y, center_x) {
+    let size = this.data.length;
+    let scores = [0, 0, 0, 0];
+    let target = this.data[center_y][center_x].value;
+    for (let x = center_x + 1; x < size; x++) {
+      scores[0] += 1;
+      if (this.data[center_y][x].value >= target) {
+        break;
+      }
+    }
+
+    for (let x = center_x - 1; x >= 0; x--) {
+      scores[1] += 1;
+      if (this.data[center_y][x].value >= target) {
+        break;
+      }
+    }
+
+    for (let y = center_y + 1; y < size; y++) {
+      scores[2] += 1;
+      if (this.data[y][center_x].value >= target) {
+        break;
+      }
+    }
+
+    for (let y = center_y - 1; y >= 0; y--) {
+      scores[3] += 1;
+      if (this.data[y][center_x].value >= target) {
+        break;
+      }
+    }
+
+    return _.reduce(scores, _.multiply, 1);
+  }
+
   run() {
-    var score = 0;
     let size = this.data.length;
     for (let y = 0; y < size; y++) {
-      let max_x = -1;
       for (let x = 0; x < size; x++) {
-        if (this.data[y][x].value > max_x) {
-          max_x = this.data[y][x].value;
-          this.data[y][x].visible = true;
-        }
-      }
-
-      max_x = -1;
-      for (let x = size - 1; x >= 0; x--) {
-        if (this.data[y][x].value > max_x) {
-          max_x = this.data[y][x].value;
-          this.data[y][x].visible = true;
-        }
+        this.data[y][x].score = this.find_score(y, x);
       }
     }
-
     this.preview(this.data);
-
-    for (let x = 0; x < size; x++) {
-      let max_y = -1;
-      for (let y = 0; y < size; y++) {
-        if (this.data[y][x].value > max_y) {
-          max_y = this.data[y][x].value;
-          this.data[y][x].visible = true;
-        }
-      }
-
-      max_y = -1;
-      for (let y = size - 1; y >= 0; y--) {
-        if (this.data[y][x].value > max_y) {
-          max_y = this.data[y][x].value;
-          this.data[y][x].visible = true;
-        }
-      }
-    }
-
-    this.preview(this.data);
-    score = _.filter(_.flattenDeep(this.data), { visible: true }).length;
-    return score;
+    return _.maxBy(_.flattenDeep(this.data), "score").score;
   }
 }
 
