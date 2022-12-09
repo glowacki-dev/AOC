@@ -5,8 +5,8 @@ class Solver {
   constructor(data, preview) {
     this.data = [];
     this.positions = new Set();
-    this.head = { x: 0, y: 0 };
-    this.tail = { x: 0, y: 0 };
+    this.segments = [];
+    for (let i = 0; i < 10; i++) this.segments.push({ x: 0, y: 0 });
     this.preview = preview;
     data.forEach((line) => {
       if (line !== "") {
@@ -19,54 +19,58 @@ class Solver {
   moveHead(direction) {
     switch (direction) {
       case "U":
-        this.head.y += 1;
+        this.segments[0].y += 1;
         break;
       case "D":
-        this.head.y -= 1;
+        this.segments[0].y -= 1;
         break;
       case "L":
-        this.head.x -= 1;
+        this.segments[0].x -= 1;
         break;
       case "R":
-        this.head.x += 1;
+        this.segments[0].x += 1;
         break;
     }
   }
 
-  moveTail(direction) {
+  // segments[0] is head, so we skip it
+  moveSegments(index = 1) {
+    if (index >= this.segments.length) return;
+    let parent = this.segments[index - 1];
+    let current = this.segments[index];
     if (
-      Math.abs(this.head.x - this.tail.x) <= 1 &&
-      Math.abs(this.head.y - this.tail.y) <= 1
+      Math.abs(parent.x - current.x) <= 1 &&
+      Math.abs(parent.y - current.y) <= 1
     )
       return;
-    switch (direction) {
-      case "U":
-        if (this.head.x !== this.tail.x) this.tail.x = this.head.x;
-        this.tail.y += 1;
-        break;
-      case "D":
-        if (this.head.x !== this.tail.x) this.tail.x = this.head.x;
-        this.tail.y -= 1;
-        break;
-      case "L":
-        if (this.head.y !== this.tail.y) this.tail.y = this.head.y;
-        this.tail.x -= 1;
-        break;
-      case "R":
-        if (this.head.y !== this.tail.y) this.tail.y = this.head.y;
-        this.tail.x += 1;
-        break;
+
+    // check if diagonal move is required
+    if (
+      Math.abs(parent.x - current.x) > 1 ||
+      Math.abs(parent.y - current.y) > 1
+    ) {
+      if (parent.x > current.x) current.x += 1;
+      if (parent.x < current.x) current.x -= 1;
+      if (parent.y > current.y) current.y += 1;
+      if (parent.y < current.y) current.y -= 1;
+    } else {
+      if (parent.x > current.x + 1) current.x += 1;
+      else if (parent.x < current.x - 1) current.x -= 1;
+      else if (parent.y > current.y + 1) current.y += 1;
+      else if (parent.y < current.y - 1) current.y -= 1;
     }
+    this.moveSegments(index + 1);
   }
 
   run() {
     this.preview(this.data);
     let positions = new Set(["0,0"]);
+    let tail = this.segments[this.segments.length - 1];
     this.data.forEach((direction) => {
       this.moveHead(direction);
-      this.moveTail(direction);
-      this.preview([this.head, this.tail]);
-      positions.add(`${this.tail.x},${this.tail.y}`);
+      this.moveSegments();
+      this.preview(this.segments);
+      positions.add(`${tail.x},${tail.y}`);
     });
     this.preview(positions);
     return positions.size;
