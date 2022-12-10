@@ -12,23 +12,27 @@ class Solver {
 
   run() {
     let history = [null, 1];
-    const checks = [20, 60, 100, 140, 180, 220];
     this.preview(this.data);
     this.data.forEach(([cmd, arg]) => {
       switch (cmd) {
         case "noop":
-          history.push(history[history.length - 1]);
+          history.push(_.last(history));
           break;
         case "addx":
-          history.push(history[history.length - 1]);
-          history.push(history[history.length - 1] + Number(arg));
-          break;
-        default:
+          history.push(_.last(history));
+          history.push(_.last(history) + Number(arg));
           break;
       }
     });
     this.preview(history);
-    return _.sum(checks.map((val) => val * history[val]));
+    let result = "";
+    for (let i = 1; i <= 240; i++) {
+      if (_.inRange((i - 1) % 40, (history[i] % 40) - 1, (history[i] % 40) + 2))
+        result += "#";
+      else result += " ";
+      if (i % 40 === 0) result += "\n";
+    }
+    return result;
   }
 }
 
