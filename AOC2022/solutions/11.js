@@ -1,5 +1,6 @@
 var _ = require("lodash");
 const path = require("path");
+const math = require("mathjs");
 
 class Monkey {
   constructor() {
@@ -13,7 +14,7 @@ class Monkey {
       // Calculate new level
       item = this.op_fn(item);
       // Decrease
-      item = Math.floor(item / 3);
+      item = item % this.lcm;
       // Move away
       if (item % this.test === 0) {
         monkeys[this.targets.true].items.push(item);
@@ -57,11 +58,13 @@ class Solver {
         }
       }
     });
+    let lcm = math.lcm(...this.monkeys.map((m) => m.test));
+    this.monkeys.forEach((monkey) => (monkey.lcm = lcm));
   }
 
   run() {
     this.preview(this.monkeys);
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10000; i++) {
       this.monkeys.forEach((monkey) => {
         monkey.take_turn(this.monkeys);
       });

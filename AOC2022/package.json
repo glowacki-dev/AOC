@@ -9,6 +9,7 @@
   "dependencies": {
     "graphology": "^0.25.1",
     "lodash": "^4.17.21",
+    "mathjs": "^11.5.0",
     "mnemonist": "^0.39.5"
   }
 }
