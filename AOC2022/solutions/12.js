@@ -22,17 +22,16 @@ class Solver {
 
   run() {
     let graph = createGraph();
-    let start = null;
+    let starts = [];
     let end = null;
     let height = this.map.length;
     let width = this.map[0].length;
-    this.preview([width, height]);
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
         let name = `${x}-${y}`;
         let point = this.map[y][x];
-        if (point.type === "start") {
-          start = name;
+        if (point.height === "a".charCodeAt(0)) {
+          starts.push(name);
         } else if (point.type === "end") {
           end = name;
         }
@@ -50,15 +49,18 @@ class Solver {
         });
       }
     }
-    let pathFinder = path.aStar(graph, {
-      distance(fromNode, toNode, link) {
-        return link.data.weight;
-      },
-      oriented: true,
+    this.preview(starts);
+    let distances = starts.map((start) => {
+      let pathFinder = path.aStar(graph, {
+        distance(fromNode, toNode, link) {
+          return link.data.weight;
+        },
+        oriented: true,
+      });
+      let foundPath = pathFinder.find(start, end);
+      return foundPath.length - 1;
     });
-    let foundPath = pathFinder.find(start, end);
-    this.preview(foundPath);
-    return foundPath.length - 1;
+    return _.min(_.filter(distances, (v) => v > 0));
   }
 }
 
