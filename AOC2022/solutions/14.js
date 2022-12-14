@@ -42,7 +42,7 @@ class Solver {
         }
       }
     });
-    this.floor = Math.max(...Object.keys(this.map).map((v) => Number(v)));
+    this.floor = Math.max(...Object.keys(this.map).map((v) => Number(v))) + 2;
     this.preview(this.floor);
     this.preview(this.map);
   }
@@ -51,7 +51,10 @@ class Solver {
     let y = 0;
     let x = 500;
     while (true) {
-      if (y > this.floor) return false;
+      if (y === this.floor - 1) {
+        _.setWith(this.map, [y, x], "o", Object);
+        return true;
+      }
       if (_.get(this.map, [y + 1, x]) === undefined) {
         y = y + 1;
       } else if (_.get(this.map, [y + 1, x - 1]) === undefined) {
@@ -70,8 +73,9 @@ class Solver {
   run() {
     let score = 0;
     while (true) {
-      if (!this.simulate_sand()) break;
-      else score += 1;
+      this.simulate_sand();
+      score += 1;
+      if (_.get(this.map, [0, 500]) !== undefined) break;
     }
     this.preview(this.map);
     return score;
