@@ -15,20 +15,26 @@ class Solver {
         }
       }
     });
+    this.monkeys["root"].op = "=";
+    this.monkeys["humn"].value = "x";
     this.preview(this.monkeys);
   }
 
   calculate(name) {
-    if (this.monkeys[name].value !== undefined) {
-      return this.monkeys[name].value;
+    let monkey = this.monkeys[name];
+    if (monkey.value !== undefined) {
+      return monkey.value;
     }
 
-    let left = this.calculate(this.monkeys[name].left);
-    let right = this.calculate(this.monkeys[name].right);
-    this.monkeys[name].value = eval(
-      `${left} ${this.monkeys[name].op} ${right}`
-    );
-    return this.monkeys[name].value;
+    let left = this.calculate(monkey.left);
+    let right = this.calculate(monkey.right);
+    let op = monkey.op;
+    this.preview([name, left, right, op, typeof left, typeof right]);
+    this.monkeys[name].value = `(${left} ${this.monkeys[name].op} ${right})`;
+    if (typeof left === "number" && typeof right === "number") {
+      monkey.value = eval(monkey.value);
+    }
+    return monkey.value;
   }
 
   run() {
