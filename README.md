@@ -32,10 +32,10 @@ Some of my solutions from past AOC events
 | Day 17 | :star: |  |
 | Day 18 | :star: | :star: |
 | Day 19 | :snowflake: |  |
-| Day 20 |  |  |
-| Day 21 |  |  |
-| Day 22 |  |  |
-| Day 23 |  |  |
+| Day 20 | :star: | :star: |
+| Day 21 | :star: | :star: |
+| Day 22 | :star: |  |
+| Day 23 | :star: | :star |
 | Day 24 |  |  |
 | Day 25 |  |  |
 
