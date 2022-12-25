@@ -109,7 +109,7 @@ class Solver {
       let line = "";
       for (let x = minX; x <= maxX; x++) {
         if (!this.map.has(`${y},${x}`)) {
-          empties += 1
+          empties += 1;
           line += ".";
         } else {
           line += "#";
